@@ -1,0 +1,58 @@
+/* ------------------------------ Google Fonts ------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    /* ----------------------- Butun sehifeye font stilit ----------------------- */
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+
+#wavy_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ------------------ Olcu olaraq 100% witdh ve 100% height ----------------- */
+    min-height: 100vh;
+    background: #000000;
+    text-align: center;
+}
+
+.creator {
+    margin-bottom: 50px;
+}
+
+.wavy .creator, .course {
+    position: relative;
+    //* ------------------------ Kolge Effecti Ucun WebKit ----------------------- */
+    -webkit-box-reflect: below -10px linear-gradient(
+        transparent, rgba(0,0,0,0.2));
+}
+
+/* ------------------- Her bir herf ucun animasiya effecti ------------------ */
+.wavy .creator span, .course span {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 32px;
+    animation: animate 3s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+/* ----------------------- Dalga effecti ucun keyframe ---------------------- */
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    40%, 100% {
+        transform: translateY(0px);
+    }
+}
+
